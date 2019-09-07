@@ -4,8 +4,6 @@
 extern crate cargo;
 extern crate structopt;
 
-use cargo::CliResult;
-use cargo::Config;
 use cargo::core::package::PackageSet;
 use cargo::core::registry::PackageRegistry;
 use cargo::core::resolver::Method;
@@ -18,9 +16,11 @@ use cargo::core::Workspace;
 use cargo::ops;
 use cargo::util::important_paths;
 use cargo::util::CargoResult;
+use cargo::CliResult;
+use cargo::Config;
 use std::path::PathBuf;
-use structopt::StructOpt;
 use std::process::Command;
+use structopt::StructOpt;
 
 // COPY-PASTED from cargo-geiger, review this later. Is it needed for all cargo plugins?
 #[derive(StructOpt)]
@@ -166,10 +166,10 @@ fn real_main(args: &Args, config: &mut Config) -> CliResult {
     let cmd = &left[0];
     for p in packs {
         let _status = Command::new(cmd)
-                    .args(right)
-                    .arg(p.root())
-                    .status()
-                    .expect("failed to execute process");
+            .args(right)
+            .arg(p.root())
+            .status()
+            .expect("failed to execute process");
     }
     Ok(())
 }
