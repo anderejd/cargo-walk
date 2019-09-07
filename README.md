@@ -17,6 +17,11 @@ Examples
 Make sure to add `--` between `cargo walk` and the command if it contains `-`
 or `--` flags.
 
+Installation
+------------
+
+`cargo install cargo-walk`
+
 Changelog
 ---------
 
