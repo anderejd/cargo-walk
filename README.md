@@ -11,6 +11,8 @@ Examples
    `cargo walk -- rg -C 10 "find me"`
  - List all crate roots in the dependency tree:
    `cargo walk echo` or `cargo walk -- echo`
+ - List dependencies based on size:
+   `cargo walk -- du -d 0 -h | sort -h`
 
 Make sure to add `--` between `cargo walk` and the command if it contains `-`
 or `--` flags.

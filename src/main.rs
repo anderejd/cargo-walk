@@ -19,7 +19,6 @@ use cargo::ops;
 use cargo::util::important_paths;
 use cargo::util::CargoResult;
 use std::path::PathBuf;
-use structopt::clap::AppSettings;
 use structopt::StructOpt;
 use std::process::Command;
 
@@ -27,14 +26,7 @@ use std::process::Command;
 #[derive(StructOpt)]
 #[structopt(bin_name = "cargo")]
 pub enum Opts {
-    #[structopt(
-        name = "walk",
-        raw(
-            setting = "AppSettings::UnifiedHelpMessage",
-            setting = "AppSettings::DeriveDisplayOrder",
-            setting = "AppSettings::DontCollapseArgsInUsage"
-        )
-    )]
+    #[structopt(name = "walk")]
     /// Run a command for each level of a Rust crate dependency tree.
     Walk(Args),
 }
