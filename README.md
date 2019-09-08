@@ -1,7 +1,7 @@
 cargo-walk
 ==========
 
-[![Safety Dance](https://img.shields.io/badge/unsafe-forbidden-success.svg)](https://github.com/rust-secure-code/safety-dance/)
+[![unsafe forbidden](https://img.shields.io/badge/unsafe-forbidden-success.svg)](https://github.com/rust-secure-code/safety-dance/)
 
 A cargo plugin to allow running a command for each package root path in a
 Rust crate dependency tree.
